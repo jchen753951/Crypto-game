@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
+.ticTacToe {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "Tittle Tittle"
+    "game_area game_info";
+
+  & h1 {
+    grid-area: Tittle;
+  }
+}
+
+.game-area {
+  grid-area: game_area;
+}
+
+.game-board {
+  border: thin solid;
+  height: 40rem;
+  width: 40rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  border-radius: 1rem;
+  border-color: #ffffff;
+  background-color: rgba(12, 28, 35, 0.751);
+}
+
+.cell {
+  border: thin solid rgba(255, 255, 255, 0.513);
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "Varela Round", sans-serif;
+  font-size: 1100%;
+  line-height: 0;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0 0 1.1rem #ffffff;
+  }
+}
+
+.cell:nth-child(1) {
+  border-top-left-radius: 1rem;
+}
+
+.cell:nth-child(3) {
+  border-top-right-radius: 1rem;
+}
+
+.cell:nth-child(7) {
+  border-bottom-left-radius: 1rem;
+}
+
+.cell:nth-child(9) {
+  border-bottom-right-radius: 1rem;
+}
+
+.X {
+  color: rgb(253, 18, 96);
+}
+
+.O {
+  color: hsl(177, 100%, 50%);
+}
+
+.game-info {
+  grid-area: game_info;
+  border-top-left-radius: 37px 140px;
+  border-top-right-radius: 23px 130px;
+  border-bottom-left-radius: 110px 19px;
+  border-bottom-right-radius: 120px 24px;
+
+  width: 70%;
+  min-width: 20rem;
+  height: 30rem;
+  left: 13.5%;
+  top: 10%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgb(28, 29, 40);
+  position: relative;
+  border: solid 0.15rem #000000;
+  line-height: 28px;
+  transform: rotate(-1deg);
+  box-shadow: 3px 15px 8px -10px rgba(0, 0, 0, 0.3);
+  transition: all 0.13s ease-in;
+
+  &:hover {
+    transform: translateY(-10px) rotate(1deg);
+    box-shadow: 3px 15px 8px -10px rgba(0, 0, 0, 0.3);
+  }
+
+  ul {
+    margin-left: -5%;
+  }
+
+  h1 {
+    text-decoration: underline;
+    margin-bottom: -3%;
+    letter-spacing: 0.5rem;
+  }
+}

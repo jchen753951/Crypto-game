@@ -1,0 +1,51 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4.5%;
+  height: 3.3rem;
+  border-radius: 2rem;
+  background-color: rgb(29, 29, 31);
+  margin-bottom: 2rem;
+  border: rgba(107, 104, 101, 0.302) solid thin;
+  box-shadow: 0 0.08rem 0.2rem #000000;
+
+  a {
+    color: white;
+
+    &:not(:first-child) {
+      margin: 0 1.2rem;
+    }
+  }
+
+  div > a {
+    &.active,
+    &:hover {
+      color: rgb(249, 104, 82);
+    }
+  }
+}
+
+.a-panel {
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-color: rgb(29, 29, 31);
+  width: fit-content;
+  padding: 0 5%;
+  height: 3rem;
+
+  border-bottom-left-radius: 12rem;
+  border-bottom-right-radius: 12rem;
+  border-bottom: rgba(70, 70, 70, 0.302) solid thin;
+  border-right: rgba(70, 70, 70, 0.302) solid thin;
+  border-left: rgba(70, 70, 70, 0.302) solid thin;
+  box-shadow: 0 0.08rem 0.2rem #000000;
+
+  top: -2.1vh;
+  left: 2%;
+
+  color: white;
+  font-size: 0.8rem;
+  transition: top 0.5s ease;
+}

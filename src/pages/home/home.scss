@@ -1,0 +1,46 @@
+.g-selection {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  column-gap: 2rem;
+  align-items: center;
+}
+
+.card {
+  border: rgb(42, 34, 14) solid thin;
+  background-color: rgba(31, 48, 60, 0.442);
+  border-radius: 1.8rem;
+  width: 100%;
+  height: 34rem;
+  box-shadow: 0 0.3rem 1rem #201a28;
+
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1.4fr 0.6fr;
+  grid-template-areas:
+    "cardImage"
+    "card_content";
+
+  &:hover {
+    cursor: pointer;
+    background-color: rgba(39, 51, 69, 0.717);
+    box-shadow: 0 0 0.8rem #605c52;
+  }
+
+  img {
+    grid-area: cardImage;
+    width: 100%;
+    align-self: center;
+  }
+
+  .card-content {
+    grid-area: card_content;
+    height: 100%;
+    justify-items: center;
+
+    h3 {
+      color: rgb(221, 228, 236);
+    }
+  }
+}
